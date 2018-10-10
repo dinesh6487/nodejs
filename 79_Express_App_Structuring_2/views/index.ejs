@@ -1,0 +1,23 @@
+<html><title>Node Html</title><head>
+    <link rel="stylesheet" type="text/css" href="/asserts/mystyle.css">
+    <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+    </head><body><h1>Hello World!</h1>
+    <form method="POST" action="/login">
+        FirstName <input type="text" id="firstName" name="firstName"/><br>
+        LastName <input type="text" id="lastName" name="lastName"/><br>
+        UserName <input type="text" id="userName" name="userName"/><br>
+        <input type="submit" name="Submit" id="submit">
+    </form>
+    <script>
+        $.ajax({
+            type:"POST",
+            url:"/api/login",
+            data: JSON.stringify({firstName:"Test", lastName:"User", userName:"User1234"}),
+            dataType:"json",
+            contentType:"application/json"
+        });
+    </script>
+    </body></html>
