@@ -1,6 +1,5 @@
 var express = require('express');
 var app = express();
-var fs = require('fs');
 
 // Best pratice to use enviroment variables
 var port = process.env.PORT || 3002;

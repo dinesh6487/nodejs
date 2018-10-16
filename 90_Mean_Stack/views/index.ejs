@@ -1,0 +1,11 @@
+<html ng-app = "TestApp"><title>Node Html</title><head>
+    <title>Mean Stack</title><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    </head><body ng-controller = "MainController as vm"><h1>Hello World!</h1>
+        <ul><li ng-repeat= "person in vm.people">
+            {{person.name}}
+        </li></ul>
+        <script>
+            var clientPeople = <%- JSON.stringify(serverPeople) %>;
+        </script>
+        <script src="/asserts/js/app.js"></script>
+    </body></html>
